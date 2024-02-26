@@ -8,22 +8,36 @@
 #include<cmath>
 
 using std::string;
+using std::vector;
 
 // Beginning of particle class
 class particle
 {
 private:
-  string particle_name;
-  //...other data members (see slides on BB)
+  string particle_type;
+  double rest_mass;
+  int charge; // This normally would not be an integer but this class is only for leptons, so therefore it is just +/-1
+  double velocity;
+  double beta_value;
 
+  const double light_speed = 2.99792458e8;
 public:
   // Constructors
-  // Here you need a default constructor, and a parameterised constructor
+  particle(){};
+  // Parameterised constructor. con_ prefix indicates constructor variable.
+  particle(string con_type, double con_rest_mass, int con_charge, double con_velocity, double con_beta_value);
 
   // Destructor
+  ~particle();
 
   // Getter functions (accessors) to 
   // This should include function returning beta value 
+  string get_type(){return particle_type;}
+  double get_rest_mass(){return rest_mass;}
+  int get_charge(){return charge;}
+  double get_velocity(){return velocity;}
+  double get_beta(){return beta_value;}
+
 
   // Setter functions, to change value of data members
   // Make sure you check input validity before changing something
@@ -34,7 +48,31 @@ public:
 
 };
 
-// Implementation of print_data function goes here
+// Implementation of parametised constructor.
+particle::particle(string con_type, double con_rest_mass, int con_charge, double con_velocity, double con_beta_value)
+{
+  particle_type = con_type;
+  rest_mass = con_rest_mass;
+  charge = con_charge;
+  velocity = con_velocity;
+  beta_value = con_beta_value;
+}
+
+// Destructor implementation
+particle::~particle()
+{
+  // Not currently sure what to put here.
+}
+
+// Implementation of print_data function 
+void particle::print_data()
+{
+  std::cout<<"Type: "<<particle_type<<std::endl;
+  std::cout<<"Rest Mass (MeV): "<<rest_mass<<std::endl;
+  std::cout<<"Charge: "<<charge<<std::endl;
+  std::cout<<"Velocity: "<<velocity<<std::endl;
+  std::cout<<"Beta Value: "<<beta_value<<std::endl;
+}
 
 // End of particle class and associated member functions
 
@@ -53,7 +91,10 @@ public:
 // Main program
 int main()
 {
+  vector<particle> particles;
+  particles.push_back(particle("Electron", 0.5110, -1, 1000, 3.33564095e-6));
 
+  particles[0].print_data();
   // Create the following particles: 
   // two electrons, four muons, three taus, one antielectron, one antimuon, one antitau 
   // Use the parameterised constructor
