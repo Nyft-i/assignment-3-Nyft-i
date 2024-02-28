@@ -1,10 +1,6 @@
-#include "particle.h"
+#include"particle.h"
 
-#include<iostream>
 #include<string>
-#include<vector>
-#include<cmath>
-
 using std::string;
 
 // Parameterised constructor. con_ prefix indicates constructor variable.
