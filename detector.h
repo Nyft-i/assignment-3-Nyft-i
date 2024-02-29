@@ -2,13 +2,15 @@
 #define DETECTOR_H_INCLUDED
 
 // Includes
+#include<string>
 
 // Namespaces
+using std::string;
 
 class detector
 {
   private:
-    // private variables and methods
+    string detector_type;
   public:
     // public variables and methods
 };

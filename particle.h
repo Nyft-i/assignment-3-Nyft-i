@@ -22,7 +22,7 @@ public:
   // Constructors
   particle(){};
   // Parameterised constructor. con_ prefix indicates constructor variable.
-  particle(string con_type, double con_rest_mass, int con_charge, double con_velocity, double con_beta_value);
+  particle(string con_type, double con_rest_mass, int con_charge, double con_velocity);
 
   // Destructor
   ~particle();

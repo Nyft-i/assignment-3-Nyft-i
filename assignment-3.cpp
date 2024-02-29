@@ -2,7 +2,7 @@
 // Assignment 3
 // Practice with C++ classes and their interactions
 
-// I've done my best to set this up such that make should correctly generate the exe file required to run the program.
+// I've done my best to set this up such that 'make' should correctly generate the exe file required to run the program.
 
 #include"particle.h"
 #include"detector.h"
@@ -20,18 +20,23 @@ using std::vector;
 int main()
 {
   vector<particle> particles;
-  particles.push_back(particle("Electron", 0.5110, -1, 1000, 3.33564095e-6));
-
-  particles[0].print_data();
-  particles[0].make_antiparticle();
-  particles[0].print_data();
-  particles[0].make_antiparticle();
-  particles[0].print_data();
-  particles[0].make_antiparticle();
   
   // Create the following particles: 
   // two electrons, four muons, three taus, one antielectron, one antimuon, one antitau 
-  // Use the parameterised constructor
+  particles.push_back(particle("Electron", 0.5110, -1, 1000));
+  particles.push_back(particle("Electron", 0.5110, -1, 1e10)); //proving that if the speed is too big it will get set to zero.
+  particles.push_back(particle("Muon", , ));
+  particles.push_back(particle("", , ));
+  particles.push_back(particle("", , ));
+  particles.push_back(particle("", , ));
+  particles.push_back(particle("", , ));
+  particles.push_back(particle("", , ));
+  particles.push_back(particle("", , ));
+  particles.push_back(particle("", , ));
+  particles.push_back(particle("", , ));
+  particles.push_back(particle("", , ));
+
+
 
   // Print out the data from all the particles (put them in a vector)
 

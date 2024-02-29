@@ -10,7 +10,7 @@ namespace misc_funcs
 {
   string tester()
   {
-    string not_number{"balls even"};
+    string not_number{""};
     return not_number;
   }
 }
