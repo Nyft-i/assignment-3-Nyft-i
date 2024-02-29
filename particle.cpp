@@ -55,7 +55,6 @@ void particle::make_antiparticle()
   // Changes the name if no name is given to be anti- or not.
   // Doesn't really work for instance if the starting particle is a positron, as an electron would be an anti-positron, which isn't technically incorrect.
   string prefix{"anti-"};
-  std::cout<<particle_type.rfind(prefix,0);
   if(particle_type.rfind(prefix, 0) == 0)
   {
     particle_type.erase(0, prefix.length());

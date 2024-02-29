@@ -2,7 +2,11 @@
 // Assignment 3
 // Practice with C++ classes and their interactions
 
+// I've done my best to set this up such that make should correctly generate the exe file required to run the program.
+
 #include"particle.h"
+#include"detector.h"
+#include"misc_funcs.h"
 
 #include<iostream>
 #include<string>
@@ -36,6 +40,5 @@ int main()
   // Pass the list of particles into each detector
 
   // Print a summary of how many particles were detected
-  
   return 0;
 }
